@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       drawer: true,
-      api_key:'9e704ef41bb048afb46a851b69d62a28',
+      // api_key:'9e704ef41bb048afb46a851b69d62a28',
       articles: [],
       errors: [] 
     }
@@ -47,7 +47,7 @@ export default {
 
 
   created () {
-    axios.get('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey='+this.api_key)
+    axios.get('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=9e704ef41bb048afb46a851b69d62a28')
       .then(response => {
         this.articles = response.data.articles
         console.log('data:')
@@ -63,7 +63,7 @@ export default {
      
       setResource(source){
 
-        axios.get('https://newsapi.org/v2/top-headlines?sources='+source+'&apiKey='+this.api_key)
+        axios.get('https://newsapi.org/v2/top-headlines?sources='+source+'&apiKey=9e704ef41bb048afb46a851b69d62a28')
         .then(response => {
           this.articles = response.data.articles
           console.log('Source Articles:')

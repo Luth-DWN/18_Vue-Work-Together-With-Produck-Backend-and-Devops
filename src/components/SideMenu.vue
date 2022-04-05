@@ -45,7 +45,7 @@ export default {
   }),
 
   created () {
-    axios.get('https://newsapi.org/v2/sources?language=en&apiKey='+this.api_key)
+    axios.get('https://newsapi.org/v2/sources?language=en&apiKey=9e704ef41bb048afb46a851b69d62a28')
       .then(response => {
         this.sources = response.data.sources
         console.log('data:')
