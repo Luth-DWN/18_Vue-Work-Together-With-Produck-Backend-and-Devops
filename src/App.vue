@@ -35,11 +35,11 @@ export default {
     }
   },
   created () {
-    axios.get('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey='+this.api_key)
+    axios.get('https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
       .then(response => {
-        this.articles = response.data.articles
+        this.articles = response.data
         console.log('data:')
-        console.log(response.data.articles)
+        console.log(response.data)
       })
       .catch(e => {
         this.errors.push(e)
